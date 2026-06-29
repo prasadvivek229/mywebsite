@@ -11,7 +11,8 @@ class FlaskTest(unittest.TestCase):
         response = self.client.get("/")
 
         # Intentionally incorrect
-        self.assertEqual(response.status_code, 404)
+        # self.assertEqual(response.status_code, 404)
+        self.assertEqual(response.status_code, 200) # now no error-test pass
 
 if __name__ == "__main__":
     unittest.main()
