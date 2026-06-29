@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Monitoring Dashboard</title>
+
+    <meta http-equiv="refresh" content="2">
+
+    <style>
+
+        body{
+            background:#f4f6f8;
+            font-family:Arial;
+            margin:40px;
+        }
+
+        h1{
+            text-align:center;
+            color:#003366;
+        }
+
+        .container{
+
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:25px;
+
+        }
+
+        .card{
+
+            background:white;
+            padding:20px;
+            border-radius:12px;
+            box-shadow:0px 2px 10px lightgray;
+
+        }
+
+        .value{
+
+            font-size:40px;
+            color:#0078D4;
+            font-weight:bold;
+
+        }
+
+        progress{
+
+            width:100%;
+            height:30px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>Python Website Monitoring Dashboard</h1>
+
+<div class="container">
+
+<div class="card">
+
+<h2>CPU Usage</h2>
+
+<div class="value">{{cpu}}%</div>
+
+<progress value="{{cpu}}" max="100"></progress>
+
+</div>
+
+<div class="card">
+
+<h2>Memory Usage</h2>
+
+<div class="value">{{memory}}%</div>
+
+<progress value="{{memory}}" max="100"></progress>
+
+</div>
+
+<div class="card">
+
+<h2>Disk Usage</h2>
+
+<div class="value">{{disk}}%</div>
+
+<progress value="{{disk}}" max="100"></progress>
+
+</div>
+
+<div class="card">
+
+<h2>Total Website Requests</h2>
+
+<div class="value">{{requests}}</div>
+
+</div>
+
+</div>
+
+<br>
+
+<h3>Current Time : {{time}}</h3>
+
+<br>
+
+<a href="/">Back to Website</a>
+
+</body>
+
+</html>
